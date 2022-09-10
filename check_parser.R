@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 # library(readr)
 library(magrittr)
 setwd(stringr::str_sub(
@@ -19,7 +11,7 @@ library(rvest)
 
 # read receipts
 check_file <-
-  read_file("chek.txt") %>% {
+  read_file("check.txt") %>% {
     unlist(str_split(., "\r\n"))
   } %>% {
     .[!. %in% c("", " ")]
